@@ -1,0 +1,914 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300&display=swap");
+
+/*-------------------------------------- START Global--------------------------------------  */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  background-color: #f4ecec;
+  overflow-x: hidden;
+}
+
+#page {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ADVICE PORTRAIT */
+#advice {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+#adviceImg {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  visibility: hidden;
+}
+#adviceText {
+  position: absolute;
+  visibility: hidden;
+}
+/*-------------------------------------- END Global--------------------------------------  */
+
+/*--------------------------------------START Header--------------------------------------  */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10vh;
+}
+
+a {
+  color: #212121;
+  text-decoration: none;
+}
+
+.logo {
+  padding: 0;
+}
+
+.logo img {
+  width: 50px;
+}
+
+/*---------------------------------------  START Nav Menu -------------------------------------- */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+
+  z-index: 99999;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style-type: none;
+}
+
+.nav ul li a {
+  padding: 50px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: 0.5s;
+}
+
+.nav ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+
+.nav a:visited {
+  text-decoration: #4e342e;
+}
+
+.nav ul li a:hover {
+  color: #a1887f;
+}
+
+/*--------------------------------------- END Nav Menu -------------------------------------- */
+/*-------------------------------------- END Header--------------------------------------  */
+
+/*--------------------------------------- START Content -------------------------------------- */
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Slab", serif;
+  color: #212121;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 0.5em;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.3em;
+  padding-top: 5%;
+}
+
+p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #212121;
+}
+
+/*------------------------------- STARTS Descriptions Section Icons (Left & Right) ----------------------------*/
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-basis: 5vw;
+  list-style: none;
+  margin-top: 10px;
+  padding-top: 30px;
+}
+
+.icons li {
+  width: 30%;
+  height: 20%;
+  margin: 10px;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: #4e342e;
+  text-align: center;
+}
+
+.icons .fas {
+  display: flex;
+  display: column;
+  font-size: 2em;
+  color: #4e342e;
+  margin: 10px;
+}
+
+.icons .iconSize .iconEggs .iconAveragelife {
+  font-size: 10px;
+}
+/*------------------------------- START Description Icons Left and Right ----------------------------*/
+
+/*--------------------------------------- START INTRO -------------------------------------- */
+
+.intro {
+  opacity: 0;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 5%;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .intro,
+p:last-child {
+  margin: 0;
+  padding: 0% 5% 7% 5%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.fa-chevron-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 85vh;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 50px;
+  height: 20px;
+  color: #f4ecec;
+  z-index: 999999;
+  left: 48%;
+  font-size: 5em;
+  opacity: 50%;
+}
+/*--------------------------------------- END INTRO -------------------------------------- */
+
+/*---------------------------------------  START Image Separation -------------------------------------- */
+.bottomSeparation {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 60vh;
+  z-index: 999;
+}
+.separationImage {
+  position: relative;
+  width: 100%;
+}
+/*---------------------------------------  END Image Separation -------------------------------------- */
+
+/*---------------------------------------  START Section Bird Details Left -------------------------------------- */
+
+.birdDetailsLeft {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  margin: 0;
+  padding: 0%;
+  display: none;
+}
+
+.textLeft {
+  width: 30vw;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 30vh;
+  left: 55vw;
+  opacity: 0;
+}
+
+.descriptionLeft {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+.imageSectionLeft {
+  position: absolute;
+  align-items: flex-start;
+  width: 40vw;
+  top: 100vh;
+  margin-bottom: 0px;
+  bottom: 0;
+}
+/*--------------------------------------- END Section Bird Details Left--------------------------------------- */
+
+/*--------------------------------------- START Section Bird Details Right--------------------------------------- */
+
+.birdDetailsRight {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  top: 0;
+}
+
+.textRight {
+  width: 30vw;
+  position: absolute;
+  left: 9vw;
+  top: 30vh;
+  opacity: 0%;
+}
+
+.descriptionRight {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  padding-top: 5%;
+}
+
+.imageSectionRight {
+  position: absolute;
+  width: 50vw;
+  margin-bottom: 0;
+  top: 100vh;
+  left: 40vw;
+  bottom: 0;
+}
+
+/*-------------------------- END Section Bird Details Right--------------------------------- */
+
+/* ------------------------------------- START Footer--------------------------------------- */
+
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+  color: #999;
+  position: absolute;
+  top: 380vh;
+}
+
+footer .contentFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer a {
+  color: #777;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+footer a:hover {
+  color: #212121;
+}
+
+/* --------------------------------------- END Footer--------------------------------------- */
+
+/*--------------------------------------- END Content -------------------------------------- */
+
+/****************************************MEDIA QUERIES****************************************/
+
+@media screen and (max-width: 1366px) and (orientation: landscape) {
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  #page {
+    visibility: hidden;
+  }
+  #advice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    background-color: #f4ecec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #adviceImg {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    visibility: visible;
+    top: 30vh;
+    left: 45vw;
+  }
+  #adviceText {
+    position: absolute;
+    visibility: visible;
+    width: 28%;
+    height: 25%;
+    color: #393232;
+    font-size: 1em;
+    top: 50vh;
+    text-align: center;
+    line-height: 1.3em;
+  }
+}
+@media screen and (width: 1024px) and (orientation: portrait){
+  body {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+  }
+  #page {
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul li {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav ul li a {
+    padding: 0;
+    font-size: 1em;
+  }
+
+  .intro {
+    opacity: 100%;
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .fa-chevron-down {
+    visibility: hidden;
+  }
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2.1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .intro p {
+    font-size: 1.1em;
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .bottomSeparation {
+    top: 50vh;
+  }
+  .separationImage {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .birdDetailsLeft {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100vh;
+  }
+
+  .imageSectionLeft {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    top:0;
+  }
+  .textLeft {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+    font-size: 1em;
+    margin-top: 20px;
+    text-align: right;
+  }
+  .birdDetailsRight {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .imageSectionRight {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    order: 1;
+  }
+  .textRight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+    order: 4;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+  footer {
+    position: relative;
+    width: 100%;
+    top: 10vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+  }
+  #page {
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul li {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav ul li a {
+    padding: 0;
+    font-size: 1em;
+  }
+
+  .intro {
+    opacity: 100%;
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .fa-chevron-down {
+    visibility: hidden;
+  }
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2.1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .intro p {
+    font-size: 1.1em;
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .bottomSeparation {
+    top: 50vh;
+  }
+  .separationImage {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .birdDetailsLeft {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100vh;
+  }
+
+  .imageSectionLeft {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    top:0;
+  }
+  .textLeft {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+    font-size: 1em;
+    margin-top: 20px;
+    text-align: right;
+  }
+  .birdDetailsRight {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .imageSectionRight {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    order: 1;
+  }
+  .textRight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+    order: 4;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+  footer {
+    position: relative;
+    width: 100%;
+    top: 10vh;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  body {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  #page {
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul li {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav ul li a {
+    padding: 0;
+    font-size: 1em;
+  }
+
+  .intro {
+    opacity: 100%;
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .fa-chevron-down {
+    visibility: hidden;
+  }
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2.1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .intro p {
+    font-size: 1.1em;
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .bottomSeparation {
+    top: 72.5vh;
+  }
+  .separationImage {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .birdDetailsLeft {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 530px;
+  }
+
+  .imageSectionLeft {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+  }
+  .textLeft {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+    font-size: 1em;
+    margin-top: 20px;
+    text-align: right;
+  }
+  .birdDetailsRight {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .imageSectionRight {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    order: 1;
+  }
+  .textRight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+    order: 4;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+  footer {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+}
+@media screen and (width: 411px) {
+  .separationImage {
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .separationImage {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .separationImage {
+    margin-top: 150px;
+  }
+}
